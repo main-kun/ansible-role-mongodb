@@ -9,9 +9,8 @@ net:
   ipv6: {{ mongodb_net_ipv6 | to_nice_json }}
   maxIncomingConnections: {{ mongodb_net_maxconns }}
   port: {{ mongodb_net_port }}
-  net:
-     mode: allowSSL
-     PEMKeyFile: /etc/ssl/mongodb.pem
+  mode: allowSSL
+  PEMKeyFile: /etc/ssl/mongodb.pem
 
 processManagement:
   fork: {{ mongodb_processmanagement_fork | to_nice_json}}
